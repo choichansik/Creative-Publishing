@@ -1,0 +1,85 @@
+/* font-family: 'Noto Serif KR', serif;
+Extra-light 200
+Light 300
+Regular 400
+Medium 500
+Semi-bold 600
+Bold 700
+Black 900 */
+
+body{background-color: #fffbf8;width: 100%; overflow-x: hidden;}
+.wrap{max-width: 1920px;width: 100%;}
+
+.header_wrap{position: fixed; width: 100%;z-index: 100;}
+header{max-width: 1280px;margin: 0 auto;}
+header .logo{width: 145px;height: 75px;margin-top: 4.5rem; display: inline-block;}
+header .logo img{width: 100%;}
+header nav, header nav ul{display: inline-block;}
+header nav{float: right;margin-top: 4.5rem;}
+header nav li{float: left; margin: 0 3rem;}
+header nav li:nth-child(4){margin: 0;}
+header nav li a{color: #681cff; display: block;text-align: center;line-height: 70px;}
+header nav li:nth-child(4) a{width: 211px; height: 75px; border-radius: 5px; color: #fff; background-color: #681cff;}
+
+section.visual{
+    width: 100vw;
+    height: 100vh;
+}
+section.visual .visual_container{
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    max-width: 1280px;
+}
+section.visual .visual_video,
+section.visual .visual_title{
+    position: absolute;
+}
+section.visual .visual_video{
+    width: 45%;
+    left: 8%;
+    top:48%;
+    transform: translateY(-50%);
+}
+section.visual .visual_video video{
+    width: 100%;
+}
+section.visual .visual_title{
+    font-size: 12rem;
+    width:572px;
+    left: 50%;
+    top: 52%;
+    line-height: .9;
+    transform: translateY(-50%);
+    color: #2c024d;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+}
+section.visual .visual_nav{
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+}
+section.visual .visual_nav p.visual_navL{
+    max-width: 29rem;
+    float: left;
+    margin-left: 2rem;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Noto Serif KR', serif;
+}
+section.visual .visual_nav a.visual_navR{
+    float: right;
+    margin-right: 2rem;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 13px;
+    display: block;
+    padding: 15px;
+    border: 1px solid #681cff;
+    border-radius: 20px;
+    color: #000;
+    transition: all .35s;
+}
+section.visual .visual_nav a.visual_navR:hover{
+    background-color: #681cff;
+    color: #fff;
+}
