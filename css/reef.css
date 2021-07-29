@@ -28,7 +28,6 @@ header nav li:nth-child(4) a{width: 211px; height: 75px; border-radius: 5px; col
 section.visual{
     height: 100vh;
     position: relative;
-    padding-bottom: 180px;
     margin-top: -147px;
 }
 section.visual .visual_container{
@@ -41,8 +40,7 @@ section.visual .visual_container{
 section.visual .visual_video{
     width: 620px;
     position: absolute;
-    top: 62%;
-    transform: translateY(-50%);
+    top: 157px;
 }
 section.visual .visual_video video{
     width: 100%;
@@ -52,11 +50,10 @@ section.visual .visual_title{
     position: absolute;
     width:600px;
     left: 50%;
-    top:70%; 
+    top: 255px;
     line-height: .8;
     color: #2c024d;
     font-weight: 400;
-    transform: translateY(-50%);
 }
 section.visual .visual_nav{
     width: 100%;
@@ -646,10 +643,7 @@ section.three .anim-click img{
     left: 0;
     animation: anim-dropsimg 5s linear infinite both;
 }
-@keyframes anim-dropsimg{
-    0%{left: 0;}
-    100%{left: -500px;}
-}
+
 .anim-drops__line{
     width: 100%;
     height: 4px;
@@ -678,11 +672,6 @@ section.three .anim-click img{
     border-radius: 20px;
     animation: thermometer 2s linear infinite both;
 }
-@keyframes thermometer{
-    0%{height: 50px;}
-    50%{height: 80px;}
-    100%{height: 50px;}
-}
 .anim-drops__dropW{
     width: 15px;
     height: 20px;
@@ -693,6 +682,15 @@ section.three .anim-click img{
     transform: translate(-50%, -50%);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     animation: dropW 1s ease-in infinite both;
+}
+@keyframes anim-dropsimg{
+    0%{left: 0;}
+    100%{left: -500px;}
+}
+@keyframes thermometer{
+    0%{height: 50px;}
+    50%{height: 80px;}
+    100%{height: 50px;}
 }
 @keyframes dropW{
     0%{top: -20%;}
