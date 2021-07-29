@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movetext</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body{width: 100%; overflow-x: hidden;}
+        .wrap{width: 100vw; margin: 0 auto; position: relative;}
+        .front-object{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .front-object img{
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: block;
+            transform: translate(-50%, -50%);
+        }
+        .background{
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            background-color: #b5dfcc;
+        }
+        .background .background-floor{
+            width: 100vw;
+            height: 30vh;
+            background-color: #f9d9cb;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .mirror{
+            width: 500px;
+            height: 500px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        ul.movetext{
+            display: flex;
+            width: fit-content;
+            transform: translate3d(-25%,0,0);
+            position: absolute;
+            top: 20%;
+        }
+        ul.movetext li{
+            margin-left: 40px;
+            font-size: 150px;
+            white-space: nowrap;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="background">
+            <ul class="movetext">
+                <li>FrameOut</li>
+                <li>FrameOut</li>
+                <li>FrameOut</li>
+                <li>FrameOut</li>
+                <li>FrameOut</li>
+            </ul>
+            <div class="background-floor"></div>
+            <div class="mirror"></div>
+        </div>
+        <div class="front-object">
+            <img src="img/3d.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
