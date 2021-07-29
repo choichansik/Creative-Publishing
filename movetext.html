@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +16,10 @@
             width: 100vw;
             height: 100vh;
             position: relative;
+            overflow: hidden;
         }
         .front-object img{
-            width: 80%;
+            width: 1150px;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -44,18 +45,28 @@
         .mirror{
             width: 500px;
             height: 500px;
-            background-color: #fff;
             position: absolute;
             bottom: 20%;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 2px 7px 15px 8px rgba(0,0,0,0.01);
             left: 50%;
             transform: translateX(-50%);
+            
+            
         }
         ul.movetext{
             display: flex;
             width: fit-content;
             transform: translate3d(-25%,0,0);
             position: absolute;
-            top: 20%;
+            top: 25%;
+            animation: move 15s linear infinite both;
+        }
+        @keyframes move{
+            100%{
+                transform: translate3d(-80%,0,0);
+            }
         }
         ul.movetext li{
             margin-left: 40px;
@@ -64,6 +75,7 @@
             color: #fff;
             font-family: 'Roboto', sans-serif;
             font-weight: 700;
+            text-transform: uppercase;
         }
     </style>
 </head>
