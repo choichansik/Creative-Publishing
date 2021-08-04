@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icons</title>
+    <style>
+        .clearfix{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #1b2024;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        #wrap{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .icons_wrap{
+            width: 688px;
+            height: 688px;
+            background-color: #1c202b;
+            overflow: hidden;
+        }
+        .icons_ul{
+            width: 2500px;
+            height: 150px;
+            margin-top: 250px;
+            transform: translateX(0);
+            animation: icons 20s linear infinite;
+        }
+        @keyframes icons{
+            0%{transform: translateX(0px);}
+            100%{transform: translateX(-1520px);}
+        }
+        .icons_ul li{
+            width: 150px;
+            height: 150px;
+            background-color: aliceblue;
+            list-style: none;
+            margin-left: 40px;
+            position: relative;
+            border-radius: 50px;
+            float: left;
+        }
+        .icons_ul li.a{
+            background-color: #ec6464;
+        }
+        .icons_ul li.b{
+            background-color: #5fbdbc;
+        }
+        .icons_ul li.c{
+            background-color: #eeb84c;
+        }
+        .icons_ul li.d{
+            background-color: #59c2f9;
+        }
+        .icons_ul li.e{
+            background-color: #55bb3e;
+        }
+        .icons_ul li.f{
+            background-color: #530d7d;
+        }
+        .icons_ul li.g{
+            background-color: #acd052;
+        }
+        .icons_ul li.h{
+            background-color: #2e6c45;
+        }
+        .icons_ul li::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #1b2024;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .icons_ul li.a::after{
+            background: url("img/ab.png") no-repeat center / 100%;
+        }
+        .icons_ul li.b::after{
+            background: url("img/bm.png") no-repeat center / 100%;
+        }
+        .icons_ul li.c::after{
+            background: url("img/em.png") no-repeat center / 100%;
+        }
+        .icons_ul li.d::after{
+            background: url("img/g9.png") no-repeat center / 100%;
+        }
+        .icons_ul li.e::after{
+            background: url("img/gm.png") no-repeat center / 100%;
+        }
+        .icons_ul li.f::after{
+            background: url("img/mk.png") no-repeat center / 100%;
+        }
+        .icons_ul li.g::after{
+            background: url("img/oy.png") no-repeat center / 100%;
+        }
+        .icons_ul li.h::after{
+            background: url("img/sb.png") no-repeat center / 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="icons_wrap">
+            <ul class="icons_ul slider">
+                <li class="a"></li>
+                <li class="b"></li>
+                <li class="c"></li>
+                <li class="d"></li>
+                <li class="e"></li>
+                <li class="f"></li>
+                <li class="g"></li>
+                <li class="h"></li>
+                <li class="a"></li>
+                <li class="b"></li>
+                <li class="c"></li>
+                <li class="d"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

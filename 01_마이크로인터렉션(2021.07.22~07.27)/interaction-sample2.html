@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+</head>
+
+<style>
+    body {
+        background: #5D00D6;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-family: 'Poppins';
+        height: 100vh;
+    }
+    button {
+        background: none;
+        color: white;
+        position: relative;
+        padding: .5em 1em;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        border: 2px solid white;
+        cursor: pointer;
+        border-radius: .2em;
+        outline: none;
+        width: 10em;
+    }
+    button::before{
+        position: absolute;
+        content: '';
+        background: #5000B8;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        border-radius: .2em;
+        top: .5em;
+        left: .5em;
+    }
+    svg {
+        position: absolute;
+        top: .7em;
+        left: .5em;
+        stroke-dasharray:0 103;
+    }
+    p {
+        text-align: center;
+        font-weight: bold;
+        clip-path: circle(0% at 50% 50%);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button>
+            <span class="label">Confirm</span>
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44.419" height="36.507" viewBox="0 0 44.419 36.507"><defs><style>.a{fill:none;stroke:#fff;stroke-width:2px;}</style></defs><path class="a" d="M130.682,218.058l14.586,17.462,28.295-34.305" transform="translate(-129.915 -200.579)"/></svg>
+            </span>
+        </button>
+        <p>Next</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js" integrity="sha512-9F1xsW3TBG87UnyGcF1SrXph249h/eUKPRKJZVhXxW+OeDmCiBvU9/gLfOo5qEvGTjTxOr6YQrY4ImjL90IUyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        gsap.registerPlugin(CSSRulePlugin);
+
+        const tl = gsap.timeline({default:{ease : Power2.easeOut, delay : 1}})
+                btn = document.querySelector("button");
+                rule = CSSRulePlugin.getRule("button::before");
+
+        tl.to(".label", {
+            opacity : 0,
+            height: 0,
+            position: "absolute",
+            duration: ".2s"
+        })
+        .to("button",{
+            borderRadius:"50%",
+            width : "2.5em",
+            height: "2.5em",
+            ease: Elastic.easeOut.config(.7, 0.3),
+            duration: 1.2
+        }, "-=.5s")
+        .to(rule,{
+            borderRadius:"50%"
+        }, "-=1s")
+        .to("svg", {
+            strokeDasharray : "90 103"
+        }, "-=1")
+        .to("path",{
+            attr:{d: "M145.8,236.314l16.359-18.148L145.8,200.681"}
+        }, "+=1")
+        .to("p",{
+            clipPath : "circle(100% at 50% 50%)",
+            duration: 1.2
+        })
+
+        tl.pause();
+
+        btn.addEventListener("click", () => {
+            tl.play();
+        })
+
+
+    </script>
+</body>
+</html>

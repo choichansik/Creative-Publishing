@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나손해보험 A type Main 1</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mainLayout.css">
+    <link rel="stylesheet" href="../plugin/swiper-bundle.css" />
+    <script src="../plugin/jquery-3.5.1.min.js"></script>
+    <script src="../plugin/swiper-bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <div id="wrap" class="Main1">
+        <div class="menuimg">
+            <img src="../img/12345-1.png" alt="">
+        </div>
+        <img src="../img/A_main_1_bg.png" alt="">
+        <ul class="nav clearfix">
+            <li>
+                <a href="#"></a>
+            </li>
+            <li>
+                <a href="#"></a>
+            </li>
+            <li>
+                <a href="#"></a>
+            </li>
+            <li>
+                <a href="#"></a>
+            </li>
+            <li>
+                <a href="#"></a>
+            </li>
+        </ul>
+        <div class="mainSlide">
+            <div class="mainSlide_list">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide A slidehere">
+                        <a href="#">
+                            <div class="imgWrap A">
+                                <div class="imgWrap_tree">
+                                    <img src="../img/main_1_tree.png" alt="">
+                                </div>
+                                <div class="imgWrap_car">
+                                    <img src="../img/main_1_car1.png" alt="">
+                                </div>
+                                <div class="imgWrap_deco">
+                                    <img src="../img/main_1_deco1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="textWrap A">
+                                <img src="../img/1111122.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide B slidehere">
+                        <a href="#">
+                            <div class="imgWrap B">
+                                <div class="imgWrap_car">
+                                    <img src="../img/main_1_car2.png" alt="">
+                                </div>
+                                <div class="imgWrap_deco">
+                                    <img src="../img/main_1_deco2.png" alt="">
+                                </div>
+                                <div class="imgWrap_girl">
+                                    <img src="../img/main_1_girl.png" alt="">
+                                </div>
+                            </div>
+                            <div class="textWrap B">
+                                <img src="../img/22222222.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide C slidehere">
+                        <a href="#">
+                            <img src="../img/33333.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const MainSwiper = new Swiper(".mainSlide_list", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        cssWidthAndHeight : true,
+        visibilityFullFit : true,
+        autoResize : false,
+        speed: 1000,
+        loop: true,
+        centeredSlides : true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        }
+    });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+
+
+            var tween1 = gsap.to(".imgWrap.A .imgWrap_car", {duration: 2,x:0, y:0,ease: Power3.easeOut});
+            var tween2 = gsap.to(".imgWrap.B .imgWrap_car", {duration: 2,x:0, y:0,ease: Power3.easeOut});
+
+            MainSwiper.on("slideChangeTransitionStart", function(){
+                if(this.activeIndex == 1 || this.activeIndex == 4){
+                    tween1.restart();
+                    tween2.reverse();
+                }if(this.activeIndex == 2){
+                    tween2.restart();
+                    tween1.reverse();
+                }
+
+                console.log(this.activeIndex);
+            });
+        });
+    </script>
+
+</body>
+</html>

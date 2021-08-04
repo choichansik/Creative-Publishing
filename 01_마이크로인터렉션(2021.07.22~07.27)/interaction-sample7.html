@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #1b2024;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .wrap{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+        }
+        .card_wrap{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card_wrap">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 172 172" style="enable-background:new 0 0 172 172;" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill:#E78C87;}
+                .st1{fill:#245FA4;}
+                .st2{fill:#4C7DB8;}
+                .st3{fill:#EEADA8;}
+            </style>
+            <g id="레이어_1">
+            </g>
+            <g id="레이어_2">
+                <g id="XMLID_1_">
+                    <path id="XMLID_6_" class="st0" d="M101.7,112l-5-2.5l-1,4.6c-2.2,6.4-8.3,5.6-11,4.8c2.3,0.9,6.6,3.2,7.1,8
+                        c0.7,6.6,8.3,6,12.8,7.2c2.6,0.7,4,0.2,4.7-0.3c-3.9-5.5-3.1-10.8-3.3-14.7C105.6,113.4,101.7,112,101.7,112z"/>
+                    <path id="XMLID_13_" class="st1" d="M84.7,119c-0.8-0.3-1.4-0.4-1.4-0.4S83.8,118.8,84.7,119z"/>
+                    <path id="XMLID_8_" class="st1" d="M104.9,29.6c-6.4-1.6-20.3-4.7-30-6.9l-19.6,89.8c12.3,2.7,28,6,28,6s0.6,0.1,1.4,0.4
+                        c2.7,0.7,8.8,1.6,11-4.8l1-4.6l-5.1-2.5l-6-3c0,0-8.5-2.3-6.5-9c1.9-6.7,8.8-3.5,8.8-3.5l12.1,3.3l12.3-54.6
+                        C112.3,40.2,115.3,32.2,104.9,29.6z"/>
+                    <path id="XMLID_15_" class="st1" d="M54.3,26.4c-2.1,9-16.1,71.5-16.1,71.5s-3.5,9.5,5,12L62.8,20C60.4,19.6,55.8,19.8,54.3,26.4z
+                        "/>
+                    <path id="XMLID_16_" class="st2" d="M64.2,20.4c0,0-0.6-0.2-1.4-0.4l-19.6,89.8c0.3,0.1,0.5,0.2,0.8,0.2c2.6,0.6,6.7,1.5,11.3,2.5
+                        l19.6-89.8C68.7,21.4,64.2,20.4,64.2,20.4z"/>
+                    <path id="XMLID_7_" class="st3" d="M146.3,133.4c-5.5-5.7-8-14.5-12.6-25.3c-4.6-10.8-6.5-15.2-8.5-19.8
+                        c-1.9-4.6-4.1-10.6-12.6-11.1c-8.5-0.5-8.5-0.5-8.5-0.5l-3.9,18.2l-0.2-0.1l-12.1-3.3c0,0-6.9-3.2-8.8,3.5c-1.9,6.7,6.5,9,6.5,9
+                        l6,3l5.1,2.5l5,2.5c0,0,3.9,1.4,4.2,7.3c0.2,3.9-0.6,9.2,3.3,14.7c1.9,2.6,4.9,5.3,9.6,7.9c14.5,8,17.2,9.2,17.2,9.2
+                        s4.1,2.8,7.6-1.1l5.3-9.2C148.9,140.8,151.8,139.1,146.3,133.4z"/>
+                </g>
+            </g>
+            </svg>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js" integrity="sha512-9F1xsW3TBG87UnyGcF1SrXph249h/eUKPRKJZVhXxW+OeDmCiBvU9/gLfOo5qEvGTjTxOr6YQrY4ImjL90IUyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let motion = setInterval(function(){
+            gsap.registerPlugin(CSSRulePlugin);
+
+            const tl = gsap.timeline({default:{ease : Power2.easeOut, delay : 1}});
+
+            tl.to(".card_wrap",{
+                duration:.5,
+                rotate:-50
+            })
+            .to(".card_wrap",{
+                x:80,
+                y:80,
+                duration: .2
+            }, ".8s")
+            .to(".card_wrap",{
+                x:0,
+                y:0,
+                duration: .2
+            }, "1s")
+            .to(".card_wrap",{
+                duration:.5,
+                rotate:0
+            }, "1.2s")
+        },2000)
+
+    </script>
+</body>
+</html>
