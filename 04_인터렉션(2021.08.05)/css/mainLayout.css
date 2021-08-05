@@ -517,3 +517,9 @@ footer{
     position: relative;
     z-index: 9000;
 }
+
+.card__image h3,
+.card__text{
+    width: 500px;
+    transform: translateX(-38%);
+}
